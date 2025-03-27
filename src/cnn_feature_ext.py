@@ -3,7 +3,6 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 from torch.utils.data import DataLoader
-from loguru import logger
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device) 
 
