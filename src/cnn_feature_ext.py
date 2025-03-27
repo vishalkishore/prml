@@ -7,13 +7,17 @@ from loguru import logger
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device) 
 
+
 transform = transforms.Compose([
+
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+
 ])
 
 data_set = datasets.CIFAR10(root="./data", train=True, download=True, transform=transform)
 dataloader = DataLoader(data_set, batch_size=32, shuffle=False)
+
 
 class cnn_feature_ext(nn.Module):
     def __init__(self):
@@ -37,6 +41,8 @@ class cnn_feature_ext(nn.Module):
         return x
 model = cnn_feature_ext()
 model.eval()
+
+
 def feature_ext(dataloader,model):
     feature_list=[]
     with torch.no_grad():
@@ -44,6 +50,8 @@ def feature_ext(dataloader,model):
             feature=model(images)
             feature_list.append(feature.view(feature.size(0),-1))
     return torch.cat(feature_list)
+
+
 cnn_feature = feature_ext(dataloader, model)
 torch.save(cnn_feature,"feature_using_cnn.pt")
 logger.info("done")
