@@ -6,13 +6,16 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "ipykernel>=6.29.5",
+    "keras>=3.9.1",
     "matplotlib>=3.10.1",
     "opencv-contrib-python>=4.11.0.86",
     "opencv-python>=4.11.0.86",
+    "optuna>=4.2.1",
     "pandas>=2.2.3",
     "scikit-image>=0.25.2",
     "scikit-learn>=1.6.1",
     "seaborn>=0.13.2",
+    "tensorflow-cpu>=2.18.0",
     "torch>=2.6.0",
     "torchvision>=0.21.0",
     "umap-learn>=0.5.7",
