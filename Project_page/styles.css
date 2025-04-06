@@ -1,0 +1,115 @@
+/* Reset & Base Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.7;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    color: #444;
+}
+
+/* Conference Section */
+.conference {
+    text-align: center;
+    color: #0078d4;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Authors Section */
+.authors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.author-card {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Affiliations Section */
+.affiliations {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* Abstract Section */
+.abstract {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+.abstract h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0078d4;
+}
+.abstract p {
+    text-align: justify;
+    font-size: 16px;
+    color: #000;
+
+}
+
+/* Superscript */
+sup {
+    font-size: 12px;
+    vertical-align: top;
+}
+
+/* Links Styling (if any) */
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #0078d4;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.links a:hover {
+    color: #005a9e;
+}
+.author-card a {
+    color: #000; /* Black text */
+    text-decoration: none; 
+    font-weight: 500;
+}
+
+.author-card a:hover {
+    text-decoration: underline; 
+}
