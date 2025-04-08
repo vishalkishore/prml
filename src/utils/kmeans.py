@@ -50,4 +50,5 @@ class KMeans:
         return np.array(centroids)
 
     def predict(self, X):
+        
         return self._assign_labels(X)
