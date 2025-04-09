@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
 <head>
-    <meta charset="UTF-8">
-    <title>Image Retrieval using CIFAR-10</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Image Retrieval using CIFAR-10</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="project_name">SanpiClassify</h1>
-    <h1 class="project_description">Image Retrieval using CIFAR-10</h1>
-    <!-- <div class="conference">Pattern Recognition and Machine Learning Course Project</div> -->
-    <div style="text-align: center; margin-bottom: 10px;">
-        <a class="author" style="text-decoration: none;" href="https://www.linkedin.com/in/kishore-vishal/" target="_blank">Vishal Kishore</a> ,
-      <a class="author" style="text-decoration: none;" href="https://www.linkedin.com/in/sirin-changulani-7b69a927b/" target="_blank">Sirin Changulani</a> ,
-      <a class="author" style="text-decoration: none;" href="https://www.linkedin.com/in/naman-soni-a46931290" target="_blank">Naman Soni</a> ,
-      <a class="author" style="text-decoration: none;" href="https://www.linkedin.com/in/aaditya-jain-7b85b028b/" target="_blank">Aaditya Jain</a> ,
-      <a class="author" style="text-decoration: none; " href="https://www.linkedin.com/in/arpita-deshmukh-9ba60428a/" target="_blank">Arpita Deshmukh</a>
-    </div>
-    
-<!-- Buttons -->
-<div class="button-container" style="text-align: center;">
-    <a href="#" class="btn"><i class="fas fa-scroll"></i> Paper</a>
-    <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-    <a href="#" class="btn"><i class="fas fa-database"></i> Dataset</a>
+
+  <h1 class="project_name">SanpiClassify</h1>
+  <h1 class="project_description">Image Retrieval using CIFAR-10</h1>
+  
+  <!-- Authors -->
+  <div style="text-align: center; margin-top: 40px; margin-bottom: 60px;">
+    <a class="author" href="https://www.linkedin.com/in/kishore-vishal/" target="_blank" style="text-decoration: none;">Vishal Kishore</a>,
+    <a class="author" href="https://www.linkedin.com/in/sirin-changulani-7b69a927b/" target="_blank" style="text-decoration: none;">Sirin Changulani</a>,
+    <a class="author" href="https://www.linkedin.com/in/naman-soni-a46931290" target="_blank" style="text-decoration: none;">Naman Soni</a>,
+    <a class="author" href="https://www.linkedin.com/in/aaditya-jain-7b85b028b/" target="_blank" style="text-decoration: none;">Aaditya Jain</a>,
+    <a class="author" href="https://www.linkedin.com/in/arpita-deshmukh-9ba60428a/" target="_blank" style="text-decoration: none;">Arpita Deshmukh</a>
   </div>
 
- 
+  <!-- Buttons -->
+  <div class="button-container">
+    <a href="" target="_blank"  class="btn"><i class="fas fa-scroll"></i> Paper</a>
+    <a href="https://github.com/vishalkishore/prml" target="_blank"  class="btn"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" class="btn"><i class="fas fa-database"></i> Dataset</a>
+  </div>
 
-    <div class="abstract">
-        <h2 class="abs">Abstract</h2>
-        <p>
-            Given an image query, the goal is to retrieve relevant images using HoG and CNN feature extraction,
-            exploring classification and clustering techniques. <strong>Image Retrieval using CIFAR-10</strong>
-            aims to develop a content-based image retrieval (CBIR) system that leverages Histogram of Oriented Gradients (HoG)
-            and Convolutional Neural Networks (CNN) for feature extraction. HoG, a traditional yet effective method, captures
-            the shape and appearance of objects by computing gradient directions across small image cells, providing robust
-            descriptors for object detection. Complementing this, CNNs extract hierarchical and complex features from images,
-            enabling superior representation of textures, edges, and object parts.
-        </p>
-    </div>
-    <div class="abstract">
-        <h2 class="abs">Demonstration Video</h2>
-        <p>
-            Youtube Video will be played here. Once made.
-        </p>
-    </div>
+  <!-- Abstract -->
+  <div class="">
+    <h2 class="abs" style="text-align: center;">Abstract</h2>
+    <p class="text">
+      Given an image query, the goal is to retrieve relevant images using HoG and CNN feature extraction,
+      exploring classification and clustering techniques. <strong>Image Retrieval using CIFAR-10</strong>
+      aims to develop a content-based image retrieval (CBIR) system that leverages Histogram of Oriented Gradients (HoG)
+      and Convolutional Neural Networks (CNN) for feature extraction. HoG, a traditional yet effective method, captures
+      the shape and appearance of objects by computing gradient directions across small image cells, providing robust
+      descriptors for object detection. Complementing this, CNNs extract hierarchical and complex features from images,
+      enabling superior representation of textures, edges, and object parts.
+    </p>
+  </div>
+
+ <!-- Dataset Images -->
+ <div class="cifar-container">
+  <h2 class="abs">CIFAR-10 Dataset</h2>
+  <div class="cifar-grid"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const gridContainer = document.querySelector('.cifar-grid');
+
+    for (let i = 1; i < 300; i++) {
+      const img = document.createElement('img');
+      img.src = `images/${i}.png`; // Adjust path if necessary
+      img.alt = `CIFAR image ${i}`;
+      img.title = `Image ${i}`;
+      gridContainer.appendChild(img);
+    }
+  });
+</script>
+  
+<!-- Demo Video -->
+<div class="demo-video">
+  <h2 class="abs" style="text-align: center;">Demonstration Video</h2>
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/g7-YWCqONkQ" 
+      title="Demonstration Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+
 
 </body>
 </html>

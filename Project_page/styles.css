@@ -41,6 +41,7 @@ h1 {
     color: #008AD7;
     font-size: 20px;
     font-family: 'Noto Sans', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -51,7 +52,22 @@ h2 {
     padding-bottom: 5px;
     color: #444;
 }
-
+.abs{
+    margin-top: 130px;
+    color:#363636;
+    font-size: 32px;
+    font-family: 'Noto Sans', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 16px;
+    font-family: 'Noto Sans', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    color: #4a4a4a;
+}
 .button-container {
     display: flex;
     justify-content: center;
@@ -79,89 +95,44 @@ h2 {
   }
   
 
-/* Conference Section */
-.conference {
+  .cifar-container {
     text-align: center;
-    color: #0078d4;
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-/* Authors Section */
-.authors-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.author-card {
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    font-weight: 500;
-    font-size: 16px;
-}
-
-/* Affiliations Section */
-.affiliations {
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 40px;
-}
-
-/* Abstract Section */
-.abstract {
-    background-color: #fff;
-    padding: 25px 30px;
+    margin: 40px auto;
+    max-width: 850px;
+  }
+  
+  .cifar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+    grid-gap: 4px;
+    justify-items: center;
+  }
+  
+  .cifar-grid img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+  }
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 85%;
+    max-height: 20px;
+    margin: auto;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    color: #000;
-}
-.abstract h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #0078d4;
-}
-.abstract p {
-    text-align: justify;
-    font-size: 16px;
-    color: #000;
-
-}
-
-/* Superscript */
-sup {
-    font-size: 12px;
-    vertical-align: top;
-}
-
-/* Links Styling (if any) */
-.links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.links a {
-    margin: 0 8px;
-    text-decoration: none;
-    color: #0078d4;
-    font-weight: 500;
-    transition: color 0.2s ease-in-out;
-}
-
-.links a:hover {
-    color: #005a9e;
-}
-.author-card a {
-    color: #000; /* Black text */
-    text-decoration: none; 
-    font-weight: 500;
-}
-
-.author-card a:hover {
-    text-decoration: underline; 
-}
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
