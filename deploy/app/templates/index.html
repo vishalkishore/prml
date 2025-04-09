@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Retrieval System</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="section-header">
+                <h2>Query Image</h2>
+            </div>
+            <div class="content-area">
+                <div class="image-container">
+                    <img id="queryImage" src="" alt="Query Image">
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="pickButton">Pick Random Image</button>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="section-header">
+                <h2>Similar Images</h2>
+            </div>
+            <div class="content-area">
+                <div id="resultsContainer" class="results-container">
+                    <p class="results-placeholder">No results yet. Pick an image and click "Retrieve Similar Images"</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="retrieveButton">Retrieve Similar Images</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', path='/js/script.js') }}"></script>
+</body>
+</html>

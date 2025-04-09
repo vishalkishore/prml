@@ -16,3 +16,6 @@ dependencies = [
     "torchvision>=0.21.0",
     "umap-learn>=0.5.7",
 ]
+
+[tool.uv.workspace]
+members = ["deploy"]
