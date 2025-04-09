@@ -11,8 +11,6 @@ WORKDIR /app
 
 COPY ./app /app/app
 COPY ./pyproject.toml /app/
-
-COPY ./pyproject.toml /app/project_pyproject.toml
 COPY ./uv.lock /app/uv.lock
 
 RUN uv sync --frozen --no-cache && rm -rf /root/.cache
@@ -21,4 +19,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

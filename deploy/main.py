@@ -18,13 +18,12 @@ from app.models.image_retriever import ImageRetriever, extract_cnn_features, inf
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
-
 templates = Jinja2Templates(directory="app/templates")
 
 def load_cifar_from_cloud():
     try:
         storage_client = storage.Client()
-        bucket = storage_client.bucket("your-bucket-name")
+        bucket = storage_client.bucket("cifar_10_dataset")
         blob = bucket.blob("cifar10.npz")
         blob.download_to_filename("/tmp/cifar10.npz")
         with np.load("/tmp/cifar10.npz") as data:
@@ -41,6 +40,7 @@ def load_cifar_from_cloud():
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 y_test = y_test.flatten()
+print("CIFAR-10 dataset loaded successfully.")
 
 cifar10_classes = [
     'airplane', 'automobile', 'bird', 'cat', 'deer', 
@@ -53,7 +53,7 @@ def get_image_retriever():
     global image_retriever
     if image_retriever is None:
         storage_client = storage.Client()
-        bucket = storage_client.bucket("your-bucket-name")
+        bucket = storage_client.bucket("cifar_10_dataset")
         blob = bucket.blob("image_retriever.joblib")
         blob.download_to_filename("/tmp/image_retriever.joblib")
         image_retriever = ImageRetriever.load('/temp/image_retriever.joblib')
