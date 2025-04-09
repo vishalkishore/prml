@@ -24,9 +24,9 @@ def load_cifar_from_cloud():
     try:
         storage_client = storage.Client()
         bucket = storage_client.bucket("cifar_10_dataset")
-        blob = bucket.blob("cifar10.npz")
-        blob.download_to_filename("/tmp/cifar10.npz")
-        with np.load("/tmp/cifar10.npz") as data:
+        blob = bucket.blob("cifar10_dataset.npz")
+        blob.download_to_filename("/tmp/cifar10_dataset.npz")
+        with np.load("/tmp/cifar10_dataset.npz") as data:
             x_train = data['x_train']
             y_train = data['y_train']
             x_test = data['x_test']
@@ -56,7 +56,7 @@ def get_image_retriever():
         bucket = storage_client.bucket("cifar_10_dataset")
         blob = bucket.blob("image_retriever.joblib")
         blob.download_to_filename("/tmp/image_retriever.joblib")
-        image_retriever = ImageRetriever.load('/temp/image_retriever.joblib')
+        image_retriever = ImageRetriever.load('/tmp/image_retriever.joblib')
     return image_retriever
 
 @app.get("/", response_class=HTMLResponse)
