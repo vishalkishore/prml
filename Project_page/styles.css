@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/google-sans');
 
 
 /* Reset & Base Styling */
@@ -24,7 +26,7 @@ h1 {
 .project_name {
   font-weight: 600;
   font-size: 48px;
-  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Google Sans','Product Sans','Open Sans','Arial', sans-serif;
   text-align: center;
   color: #363636;
   margin: 0px 0px 20px;
@@ -32,7 +34,7 @@ h1 {
 .project_description {
   font-weight: 500;
   font-size: 40px;
-  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Google Sans','Product Sans','Open Sans','Arial', sans-serif;
   text-align: center;
   color: #363636;
   margin: 0px 0px 20px;
