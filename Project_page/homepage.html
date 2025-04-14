@@ -31,13 +31,19 @@
   <div class="">
     <h2 class="abs" style="text-align: center;">Abstract</h2>
     <p class="text">
-      Given an image query, the goal is to retrieve relevant images using HoG and CNN feature extraction,
-      exploring classification and clustering techniques. <strong>Image Retrieval using CIFAR-10</strong>
-      aims to develop a content-based image retrieval (CBIR) system that leverages Histogram of Oriented Gradients (HoG)
-      and Convolutional Neural Networks (CNN) for feature extraction. HoG, a traditional yet effective method, captures
-      the shape and appearance of objects by computing gradient directions across small image cells, providing robust
-      descriptors for object detection. Complementing this, CNNs extract hierarchical and complex features from images,
-      enabling superior representation of textures, edges, and object parts.
+      This project focuses on feature-based image retrieval from the CIFAR-10 dataset using a combination
+of classical and deep learning approaches. We experimented with multiple feature extraction techniques including HOG, SIFT, edge detection, and deep features from ResNet-50. For unsupervised
+learning, K-Means clustering was evaluated across different cluster sizes with and without PCA. In
+supervised learning, Support Vector Machines (SVM) with various kernels and PCA preprocessing
+showed improved classification and retrieval performance, achieving a maximum precision of 0.567
+with the RBF kernel and PCA. A simple MLP classifier was also implemented to enhance retrieval
+by class-based filtering. Furthermore, we explored Bag of Visual Words (BoVW) and VLAD (Vector of Locally Aggregated Descriptors) using deep features, where BoVW combined with TF-IDF
+weighting demonstrated superior retrieval accuracy due to its ability to capture fine-grained, local
+features. Our findings emphasize that integrating deep features with traditional retrieval frameworks
+like BoVW yields effective results on low-resolution datasets such as CIFAR-10.
+<br><br>
+<b>Keywords:</b> Image Retrieval, CIFAR-10, SVM, K-Means, PCA, BoVW,VLAD,MLP Feature
+Extraction
     </p>
   </div>
 
@@ -61,12 +67,12 @@
   });
 </script>
   
-<!-- Demo Video -->
+<!-- Presentation Video -->
 <div class="demo-video">
-  <h2 class="abs" style="text-align: center;">Project Demonstration</h2>
+  <h2 class="abs" style="text-align: center;">Project Presentation</h2>
   <div class="video-container">
     <iframe 
-      src="https://www.youtube.com/embed/g7-YWCqONkQ" 
+      src="https://www.youtube.com/embed/g5sTVsZvl2g" 
       title="Demonstration Video"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -74,6 +80,85 @@
     </iframe>
   </div>
 </div>
+
+<!-- Demo Video -->
+<div class="demo-video">
+  <h2 class="abs" style="text-align: center;">Project Presentation</h2>
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/40TC8Hd8nZo" 
+      title="Demonstration Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+<!-- Team Section -->
+<div style="text-align: center; margin-top: 100px;">
+  <h2 class="abs">Team</h2>
+  <div class="team-container">
+    <!-- Vishal Kishore -->
+    <div class="team-card">
+      <img src="images/vishal.jpeg" alt="Vishal Kishore">
+      <div class="team-name">Vishal<br>Kishore</div>
+      <div class="team-icons">
+        <a href="https://www.linkedin.com/in/kishore-vishal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Sirin Changulani -->
+    <div class="team-card">
+      <img src="images/sirin.jpeg" alt="Sirin Changulani">
+      <div class="team-name">Sirin<br>Changulani</div>
+      <div class="team-icons">
+        <a href="https://www.linkedin.com/in/sirin-changulani-7b69a927b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Naman Soni -->
+    <div class="team-card">
+      <img src="images/naman.jpeg" alt="Naman Soni">
+      <div class="team-name">Naman<br>Soni</div>
+      <div class="team-icons">
+        <a href="https://www.linkedin.com/in/naman-soni-a46931290" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Aaditya Jain -->
+    <div class="team-card">
+      <img src="images/aaditya.jpeg" alt="Aaditya Jain">
+      <div class="team-name">Aaditya<br>Jain</div>
+      <div class="team-icons">
+        <a href="https://www.linkedin.com/in/aaditya-jain-7b85b028b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Arpita Deshmukh -->
+    <div class="team-card">
+      <img src="images/arpita.jpeg" alt="Arpita Deshmukh">
+      <div class="team-name">Arpita<br>Deshmukh</div>
+      <div class="team-icons">
+        <a href="https://www.linkedin.com/in/arpita-deshmukh-9ba60428a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+ <!-- Contact -->
+ <div class="">
+  <h2 class="abs" style="text-align: center;">Contact</h2>
+  <p class="text" style="text-align: center;">
+    For questions, please contact authors or raise an issue on <a href="https://github.com/vishalkishore/prml" target="_blank" >Github Repository</a>.
+  </p>
+</div>
+
 
 <div style="margin-bottom: 150px;"></div>
 
